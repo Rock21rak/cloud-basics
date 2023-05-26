@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .ageCalculator {
+            background-color: black;
+            color: whitesmoke;
+            width: 500px;
+            padding: 2px;
+            border-radius: 15px;
+        }
+
+        .inputGroup {
+            font-size: 25px;
+        }
+
+        #submitButton {
+            background-color: #E6E6FA; 
+            color: black;
+        }
+        
+    </style>
+</head>
+<body>
+    <center>
+        <div class="ageCalculator">
+            <h1>Age Calculator</h1>
+            <input class="inputGroup" type="date" name="ageInput" id="ageInput">
+            <br><br>
+            <input class="inputGroup" id="submitButton" type="submit" value="Calculate Your Age" onclick="calculateAge()">
+            <br><br>
+            <div id="output">
+
+            </div>
+        </div>
+    </center>
+    <script>
+        function calculateAge() {
+            const ageInput = document.getElementById('ageInput').value;
+            const dob = new Date(ageInput);
+            const currentdate = new Date();
+            let diffInYears =(currentdate.getTime() - dob.getTime()) / 1000;
+            diffInYears = diffInYears / (60 * 60 * 24);
+            const output = Math.abs(Math.round(diffInYears/365));
+            document.getElementById('output').innerText = `You're ${output} years old`;
+        }
+    </script>
+</body>
+</html>

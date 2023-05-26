@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Color Generator</title>
+    <style>
+        #div-color {
+            border: 4px solid rgb(57, 41, 175);
+            height: 400px;
+            width: 400px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <center>
+            <h1>Random Color Generator</h1>
+            <div id="div-color">
+            </div> <br>
+            <input type="submit" value="Tap to change colour" onclick="changeColor()">
+        </center>
+    </div>
+    <script>
+        function changeColor() {
+            const randomColor = Math.floor(Math.random() * 16777215).toString(16);
+            document.getElementById('div-color').style.backgroundColor = `#${randomColor}`;
+        }
+    </script>
+</body>
+</html>

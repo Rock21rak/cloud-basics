@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator App</title>
+</head>
+<body>
+    <center>
+        <h1>Calculator App</h1>
+        <input type="number" name="firstNumber" id="firstNumber">
+        <br><br>
+        <input type="number" name="secondNumber" id="secondNumber">
+        <br><br>
+        <div style="padding: 5px;">
+            <input type="submit" value="Sum" onclick="sum()">
+            <input type="submit" value="Difference" onclick="difference()">
+            <input type="submit" value="Product" onclick="product()">
+        </div>
+        <div>
+            <span>
+                <b>Output:</b>
+            </span>
+            <span id="output"></span>
+        </div>
+    </center>
+    <script>
+        function sum() {
+            const firstNumber = document.getElementById('firstNumber').value;
+            const secondNumber = document.getElementById('secondNumber').value;
+            document.getElementById('output').innerText = Number(firstNumber) + Number(secondNumber);
+        }
+
+        function difference() {
+            const firstNumber = document.getElementById('firstNumber').value;
+            const secondNumber = document.getElementById('secondNumber').value;
+            document.getElementById('output').innerText = Number(firstNumber) - Number(secondNumber);
+        }
+
+        function product() {
+            const firstNumber = document.getElementById('firstNumber').value;
+            const secondNumber = document.getElementById('secondNumber').value;
+            document.getElementById('output').innerText = Number(firstNumber) * Number(secondNumber);
+        }
+    </script>
+</body>
+</html>
