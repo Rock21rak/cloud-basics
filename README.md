@@ -1,2 +1,2 @@
 # cloud-basics
-html  css &amp; js 
+html  css & js 

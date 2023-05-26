@@ -1,3 +1,3 @@
 About javascript
-loops in js
+loops in java script
 

@@ -20,7 +20,6 @@ function calculateResult() {
     expression = '';
   }
 }
-
 function clearResult() {
   result.value = '';
   expression = '';
